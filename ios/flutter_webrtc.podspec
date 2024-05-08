@@ -15,7 +15,7 @@ A new flutter plugin project.
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.dependency 'JitsiMeetSDK', '8.2.2'
+  s.dependency 'GoogleWebRTC', '1.1.31999'
   s.ios.deployment_target = '12.0'
   s.static_framework = true
 end
