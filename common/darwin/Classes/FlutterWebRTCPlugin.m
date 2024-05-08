@@ -228,10 +228,10 @@ void postEvent(FlutterEventSink sink, id _Nullable event) {
         VideoDecoderFactory* decoderFactory = [[VideoDecoderFactory alloc] init];
         VideoEncoderFactory* encoderFactory = [[VideoEncoderFactory alloc] init];
 
-        VideoEncoderFactorySimulcast* simulcastFactory =
-            [[VideoEncoderFactorySimulcast alloc] initWithPrimary:encoderFactory fallback:encoderFactory];
+        // VideoEncoderFactorySimulcast* simulcastFactory =
+        //     [[VideoEncoderFactorySimulcast alloc] initWithPrimary:encoderFactory fallback:encoderFactory];
 
-        _peerConnectionFactory = [[RTCPeerConnectionFactory alloc] initWithEncoderFactory:simulcastFactory
+        _peerConnectionFactory = [[RTCPeerConnectionFactory alloc] initWithEncoderFactory:encoderFactory
                                                                            decoderFactory:decoderFactory];
 
         RTCPeerConnectionFactoryOptions *options = [[RTCPeerConnectionFactoryOptions alloc] init];
